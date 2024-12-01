@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AdmissionCommittee.Models;
+﻿using AdmissionCommittee.Models;
 
 namespace AdmissionCommittee.Helpers
 {
@@ -53,7 +48,7 @@ namespace AdmissionCommittee.Helpers
                     BirthDay = new DateTime(year, month, day),
                     FormOfEducation = formOfEducationValues[random.Next(formOfEducationValues.Length)],
                     Gender = genderValues[random.Next(genderValues.Length)],
-                    ITScore = random.Next(101),
+                    ItScore = random.Next(101),
                     RussianScore = random.Next(101),
                     MathScore = random.Next(101),
                 };

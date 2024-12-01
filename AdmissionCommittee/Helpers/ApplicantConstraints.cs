@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdmissionCommittee.Helpers
+﻿namespace AdmissionCommittee.Helpers
 {
     /// <summary>Ограничения полей для <see cref="Models.Applicant"/></summary>
     static internal class ApplicantConstraints

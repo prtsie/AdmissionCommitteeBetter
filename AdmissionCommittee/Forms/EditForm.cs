@@ -1,4 +1,3 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 using AdmissionCommittee.Helpers;
 using AdmissionCommittee.Models;
@@ -23,7 +22,7 @@ namespace AdmissionCommittee
             birthDateTimePicker.AddBindings(x => x.Value, Applicant, x => x.BirthDay, errorProvider1);
             mathScoreNumericUpDown.AddBindings(x => x.Value, Applicant, x => x.MathScore, errorProvider1);
             russianScoreNumericUpDown.AddBindings(x => x.Value, Applicant, x => x.RussianScore, errorProvider1);
-            ITScoreNumericUpDown.AddBindings(x => x.Value, Applicant, x => x.ITScore, errorProvider1);
+            ITScoreNumericUpDown.AddBindings(x => x.Value, Applicant, x => x.ItScore, errorProvider1);
         }
 
         private void saveButton_Click(object _, EventArgs __)
@@ -36,10 +35,10 @@ namespace AdmissionCommittee
                 Close();
                 return;
             }
-            MessageBox.Show("Не все поля корректны", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅ", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        /// <summary>Рисует имена для значений <see cref="Enum"></see> в <see cref="ComboBox"/> по свойству <see cref="DisplayAttribute.Name"/></summary>
+        /// <summary>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ <see cref="Enum"></see> пїЅ <see cref="ComboBox"/> пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ <see cref="DisplayAttribute.Name"/></summary>
         private void ComboBox_DrawItem(object sender, DrawItemEventArgs e)
         {
             var comboBox = (ComboBox)sender;

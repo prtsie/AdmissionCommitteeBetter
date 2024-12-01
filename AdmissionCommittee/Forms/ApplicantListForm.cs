@@ -1,7 +1,4 @@
 using System.ComponentModel;
-using System.Data.Entity;
-using System.Data.Entity.Migrations;
-using AdmissionCommittee.DB;
 using AdmissionCommittee.Forms;
 using AdmissionCommittee.Helpers;
 using AdmissionCommittee.Models;
@@ -80,7 +77,7 @@ namespace AdmissionCommittee
                 selected.Gender = editForm.Applicant.Gender;
                 selected.MathScore = editForm.Applicant.MathScore;
                 selected.RussianScore = editForm.Applicant.RussianScore;
-                selected.ITScore = editForm.Applicant.ITScore;
+                selected.ItScore = editForm.Applicant.ItScore;
                 dataStorage.Update(selected);
                 bindingSource.ResetBindings(false);
                 CalculateScores();

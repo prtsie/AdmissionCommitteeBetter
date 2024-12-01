@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 using AdmissionCommittee.DB;
 using AdmissionCommittee.Helpers;
 
@@ -36,12 +31,12 @@ namespace AdmissionCommittee.Models
         [Display(Name = "Дата рождения")]
         public DateTime BirthDay { get; set; }
 
-        [Display(Name = "Форма обучения")]
         ///<summary><inheritdoc cref="Models.FormOfEducation"/></summary>
+        [Display(Name = "Форма обучения")]
         public FormOfEducation FormOfEducation { get; set; }
 
-        [Display(Name = "Пол")]
         ///<summary><inheritdoc cref="Models.Gender"/></summary>
+        [Display(Name = "Пол")]
         public Gender Gender { get; set; }
 
         [Range(0, 100)]
@@ -54,10 +49,10 @@ namespace AdmissionCommittee.Models
 
         [Range(0, 100)]
         [Display(Name = "Баллы по информатике")]
-        public int ITScore { get; set; }
+        public int ItScore { get; set; }
 
         [Display(Name = "Сумма баллов")]
-        public int TotalScore => MathScore + RussianScore + ITScore;
+        public int TotalScore => MathScore + RussianScore + ItScore;
 
         public object Clone() => MemberwiseClone();
     }
