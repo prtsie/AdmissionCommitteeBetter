@@ -1,11 +1,10 @@
 using System.ComponentModel;
-using AdmissionCommittee.Forms;
 using AdmissionCommittee.Helpers;
 using AdmissionCommittee.Models;
 using AdmissionCommittee.Properties;
 using Serilog;
 
-namespace AdmissionCommittee
+namespace AdmissionCommittee.Forms
 {
     /// <summary>Форма со списком абитуриентов</summary>
     public partial class ApplicantListForm : Form
@@ -22,7 +21,7 @@ namespace AdmissionCommittee
             InitializeComponent();
             dataGridView.AutoGenerateColumns = false;
             data = new();
-            data.ListChanged += (o, args) => CalculateScores();
+            data.ListChanged += (_, _) => CalculateScores();
             bindingSource.DataSource = data;
             dataGridView.DataSource = bindingSource;
         }

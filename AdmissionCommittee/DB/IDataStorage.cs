@@ -1,6 +1,6 @@
 ﻿namespace AdmissionCommittee.DB
 {
-    internal interface IDataStorage : IDisposable
+    public interface IDataStorage : IDisposable
     {
         List<T> GetList<T>() where T : class, IDatabaseEntity;
 

@@ -1,4 +1,4 @@
-﻿namespace AdmissionCommittee
+﻿namespace AdmissionCommittee.Forms
 {
     partial class ApplicantListForm
     {

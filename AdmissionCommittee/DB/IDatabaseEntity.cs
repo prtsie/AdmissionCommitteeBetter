@@ -1,6 +1,6 @@
 ﻿namespace AdmissionCommittee.DB
 {
-    internal interface IDatabaseEntity
+    public interface IDatabaseEntity
     {
     }
 }

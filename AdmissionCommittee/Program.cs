@@ -2,6 +2,8 @@ using System.Reflection;
 using System.ComponentModel.DataAnnotations;
 using Serilog;
 using AdmissionCommittee.DB;
+using AdmissionCommittee.Forms;
+using Microsoft.EntityFrameworkCore;
 
 namespace AdmissionCommittee
 {
@@ -40,6 +42,9 @@ namespace AdmissionCommittee
             throw new InvalidOperationException(!attributes.Any() ? "У значения нет атрибута Display" : "У атрибута Display не задано свойство Name");
         }
 
-        public static IDataStorage GetDataStorage() => new CommitteeContext();
+        public static IDataStorage GetDataStorage()
+            => new CommitteeContext(
+                new DbContextOptionsBuilder<CommitteeContext>().
+                    UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=committeeDB;Integrated Security=true").Options);
     }
 }

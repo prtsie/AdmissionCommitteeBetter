@@ -36,7 +36,7 @@ namespace AdmissionCommittee.Helpers
                 var validationAttributes = sourcePropertyInfo?.GetCustomAttributes<ValidationAttribute>();
                 if (validationAttributes?.Any() == true)
                 {
-                    control.Validating += (o, args) =>
+                    control.Validating += (_, _) =>
                     {
                         var context = new ValidationContext(source);
                         var results = new List<ValidationResult>();

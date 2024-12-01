@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using AdmissionCommittee.Helpers;
 using AdmissionCommittee.Models;
 
-namespace AdmissionCommittee
+namespace AdmissionCommittee.Forms
 {
     public partial class EditForm : Form
     {
@@ -35,10 +35,9 @@ namespace AdmissionCommittee
                 Close();
                 return;
             }
-            MessageBox.Show("�� ��� ���� ���������", "������", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Не все поля корректны", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        /// <summary>������ ����� ��� �������� <see cref="Enum"></see> � <see cref="ComboBox"/> �� �������� <see cref="DisplayAttribute.Name"/></summary>
         private void ComboBox_DrawItem(object sender, DrawItemEventArgs e)
         {
             var comboBox = (ComboBox)sender;
