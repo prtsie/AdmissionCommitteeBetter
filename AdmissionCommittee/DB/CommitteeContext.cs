@@ -7,8 +7,8 @@ namespace AdmissionCommittee.DB
     {
         public CommitteeContext(DbContextOptions<CommitteeContext> options) : base(options)
         {
+            Database.EnsureCreated();
         }
-
         public DbSet<Applicant> Applicants { get; set; } = null!;
 
         public List<T> GetList<T>() where T : class, IDatabaseEntity => Set<T>().ToList();
